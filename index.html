@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center; background-color: black;color: yellow;">Tip Calculator</h1> 
+    <div class="container">
+        <div id="col1">
+            <div id="up">
+                <h2>Bill:</h2><br />
+                <!--input field for bill-->
+                <input type="text" id="bill" />
+            </div>
+            <div id="middle">
+                    <h2>Tip %</h2><br/>
+                    <!--buttons for increasing and decreasing the tip value-->
+                    <button class="decrement" onclick="decrementTip()">-</button>
+                    <input type="text" id="tip" value="0"/>
+                    <button class="increment" onclick="incrementTip()">+</button>
+            </div>
+            <div id="low">
+                <h2>Number of People</h2>
+                <!--buttons for increasing and decreasing the number of people-->
+                <button class="decrement" onclick="decrementCount()">-</button>
+                <input type="text" id="people" value="0"/>
+                <button class="increment" onclick="incrementCount()">+</button>
+            </div>
+        </div>
+        <!--column 2 will display tip and total bill-->
+        <div id="col2"> 
+            <div id="person">
+                <h2>Tip</h2>
+                <h4>per person</h4>
+                <h1 id="displayTip"></h1>
+            </div>
+            <div id="billTotal">
+                <h2>Total</h2>
+                <h4>per person</h4>
+                <h1 id="displayTotal"></h1>
+            </div>
+        </div>
+
+    </div>
+    <div class="center">
+        <!--result will display after clicking on calculate button-->
+        <button id="calculateBill" onclick="calculateBill() ">Calculate</button>
+    </div>
+    <script src="tipscript.js"></script>
+</body>
+</html>
